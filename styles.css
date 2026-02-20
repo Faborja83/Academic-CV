@@ -5,9 +5,9 @@ body {
   line-height: 1.65;
   background: #ffffff;
   color: #111;
+  padding: 0 20px; /* improves mobile layout */
 }
 
-/* ---------- Header ---------- */
 /* ===== Header Layout ===== */
 
 .header-grid {
@@ -18,6 +18,10 @@ body {
   margin-bottom: 40px;
 }
 
+header {
+  margin-bottom: 35px;
+}
+
 /* ===== Profile Image ===== */
 
 .profile {
@@ -26,38 +30,37 @@ body {
   border: 1px solid #ddd;
 }
 
-/* ===== Tech Tagline ===== */
+/* ===== Title ===== */
+
+h1 {
+  font-size: 2.1em;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Computational Tagline ===== */
 
 .tech {
   font-family: "SF Mono", Consolas, monospace;
   background: #f5f7fa;
   padding: 4px 8px;
   display: inline-block;
-  margin: 8px 0;
+  margin: 8px 0 10px 0;
   border-radius: 4px;
 }
-header {
-  margin-bottom: 35px;
-}
 
-h1 {
-  font-size: 2.1em;
-  margin-bottom: 6px;
-  letter-spacing: 0.5px;
-}
-
-/* Subtle tech accent line */
+/* Subtle academic-tech accent line */
 
 header::after {
   content: "";
   display: block;
   height: 2px;
   width: 120px;
-  background: #2b6cb0;   /* deep academic blue */
-  margin-top: 12px;
+  background: #2b6cb0;
+  margin-top: 14px;
 }
 
-/* ---------- Navigation ---------- */
+/* ===== Navigation ===== */
 
 nav {
   margin: 28px 0;
@@ -75,7 +78,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ---------- Sections ---------- */
+/* ===== Sections ===== */
 
 h2 {
   margin-top: 48px;
@@ -84,29 +87,30 @@ h2 {
   padding-bottom: 6px;
 }
 
-/* ---------- Lists ---------- */
+/* ===== Lists ===== */
 
 ul, ol {
   margin-top: 10px;
+  padding-left: 20px;
 }
 
-/* ---------- Status text ---------- */
+/* ===== Status text ===== */
 
 .status {
   color: #555;
   font-style: italic;
 }
 
-/* ---------- Subtle "computational" accent ---------- */
+/* ===== Code / Tech accents ===== */
 
-code, .tech {
+code {
   font-family: "SF Mono", Consolas, monospace;
   background: #f5f7fa;
   padding: 2px 6px;
   border-radius: 4px;
 }
 
-/* ---------- Links ---------- */
+/* ===== Links ===== */
 
 a {
   color: #2b6cb0;
@@ -116,10 +120,23 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ---------- Footer ---------- */
+/* ===== Footer ===== */
 
 footer {
   margin-top: 60px;
   color: #777;
   font-size: 0.9em;
+}
+
+/* ===== Mobile Optimization ===== */
+
+@media (max-width: 700px) {
+  .header-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile {
+    margin: 0 auto 15px auto;
+  }
 }
