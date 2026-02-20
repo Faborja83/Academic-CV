@@ -8,7 +8,34 @@ body {
 }
 
 /* ---------- Header ---------- */
+/* ===== Header Layout ===== */
 
+.header-grid {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+/* ===== Profile Image ===== */
+
+.profile {
+  width: 160px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+/* ===== Tech Tagline ===== */
+
+.tech {
+  font-family: "SF Mono", Consolas, monospace;
+  background: #f5f7fa;
+  padding: 4px 8px;
+  display: inline-block;
+  margin: 8px 0;
+  border-radius: 4px;
+}
 header {
   margin-bottom: 35px;
 }
